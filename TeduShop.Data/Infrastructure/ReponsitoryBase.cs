@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace TeduShop.Data.Infrastructure
 {
     //thực thi các class định nghĩa IReponsitory
-    public abstract class ReponsitoryBase<T> where T : class
+    public abstract class ReponsitoryBase<T> : IRepository<T> where T : class
     {
         #region Properties
         private TeduShopDbContext dataContext;
