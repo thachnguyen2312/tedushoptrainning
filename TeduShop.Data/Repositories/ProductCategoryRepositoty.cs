@@ -5,7 +5,7 @@ using TeduShop.Model.Models;
 using System.Linq;
 namespace TeduShop.Data.Repositories
 {
-    internal class ProductCategoryRepositoty : ReponsitoryBase<ProductCategory>, IProductCategoryRepositoty
+    internal class ProductCategoryRepositoty : RepositoryBase<ProductCategory>, IProductCategoryRepositoty
     {
         public ProductCategoryRepositoty(IDbFactory dbFactory) : base(dbFactory)
         {
