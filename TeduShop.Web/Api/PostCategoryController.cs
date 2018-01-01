@@ -21,17 +21,17 @@ namespace TeduShop.Web.Api
         {
             return CreateHttpResponse(request, () =>
             {
-                HttpResponseMessage response = null;
-                if (ModelState.IsValid)
-                {
-                    request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
-                }
-                else
-                {
+                //HttpResponseMessage response = null;
+                //if (ModelState.IsValid)
+                //{
+                //    request.CreateErrorResponse(HttpStatusCode.BadRequest, ModelState);
+                //}
+                //else
+                //{
                     var listCategory = _postCategoryService.GetAll();
-                    _postCategoryService.Save();
-                    response = request.CreateResponse(HttpStatusCode.OK);
-                }
+                //_postCategoryService.Save();
+                HttpResponseMessage response = request.CreateResponse(HttpStatusCode.OK, listCategory);
+                //}
                 return response;
             });
         }
